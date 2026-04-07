@@ -1,0 +1,117 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.KARDS</groupId>
+  <artifactId>KARDS-DeckBuild</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>KARDS</name>
+  <build>
+  	<plugins>
+  		<plugin>
+	  		<!-- maven-compiler-plugin -->
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-compiler-plugin</artifactId>
+			    <version>3.15.0</version>
+			    <configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+		</plugin>
+		<plugin>
+			<!-- maven-surefire-plugin -->
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>3.5.5</version>
+			   	<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>grid.xml</suiteXmlFile><!-- SuiteXmlFile -->
+						</suiteXmlFiles>
+				</configuration>
+		</plugin>
+  	</plugins>
+  </build>
+	  <dependencies>
+		  	<!-- selenium-java -->
+			<dependency>
+			    <groupId>org.seleniumhq.selenium</groupId>
+			    <artifactId>selenium-java</artifactId>
+			    <version>4.41.0</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- webdrivermanager -->
+			<dependency>
+			    <groupId>io.github.bonigarcia</groupId>
+			    <artifactId>webdrivermanager</artifactId>
+			    <version>6.3.3</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- selenium-chrome-driver -->
+			<dependency>
+			    <groupId>org.seleniumhq.selenium</groupId>
+			    <artifactId>selenium-chrome-driver</artifactId>
+			    <version>4.41.0</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- GECKO DRIVER / FIREFOX -->
+			<dependency>
+				<groupId>org.seleniumhq.selenium</groupId>
+				<artifactId>selenium-firefox-driver</artifactId>
+				<version>4.41.0</version>
+		    <scope>test</scope>
+			</dependency>
+			<!--  EDGE DRIVER  -->
+			<dependency>
+				<groupId>org.seleniumhq.selenium</groupId>
+				<artifactId>selenium-edge-driver</artifactId>
+				<version>4.41.0</version>
+		    	<scope>test</scope>
+			</dependency>
+			<!-- testng -->
+			<dependency>
+			    <groupId>org.testng</groupId>
+			    <artifactId>testng</artifactId>
+			    <version>7.12.0</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- ALLURE TEST-NG -->
+			<dependency>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-testng</artifactId>
+				<version>2.33.0</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- LOG4J -->
+			<dependency>
+			    <groupId>org.apache.logging.log4j</groupId>
+			    <artifactId>log4j-core</artifactId>
+			    <version>2.25.3</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- LOG4J API -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>2.25.3</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- Log4j-slf4j -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>2.25.3</version>
+			    <scope>test</scope>
+			</dependency>
+			<!-- SLF4J API Module -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>2.0.17</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- SLF4J LOG4J 12 Binding -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>2.0.17</version>
+				<scope>test</scope>
+			</dependency>
+	  </dependencies>
+</project>

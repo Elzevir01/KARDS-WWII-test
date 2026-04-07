@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="1" parallel="tests">
+	<test name="CHROME">
+		<parameter name="browser" value="CHROME"></parameter>
+		<parameter name="nodeUrl" value="http://selenium-hub-c:4444/wd/hub"></parameter>
+		<classes>
+			<class name="com.Kards.kards" />
+		</classes>
+	</test>
+</suite>

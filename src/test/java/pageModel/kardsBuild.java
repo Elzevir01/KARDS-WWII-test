@@ -7,8 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 public class kardsBuild extends Base {
 
     private By buscador = By.xpath("//input[@id='build-card-search']");
-    private By codigoImportacion = By.xpath("//span[text()='Obtener código de importación']");
-    private By maxCartas = By.xpath("//div[contains(text(), '40')]");
+    private By codigoImportacion = By
+            .xpath("/html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[2]/div[1]/button/span[2]");
+    private By maxCartas = By.xpath(
+            "/html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div/div/article/div/div/div[3]");
 
     ///// CONSTRUCTOR /////
     public kardsBuild(WebDriver driver) {
@@ -26,9 +28,9 @@ public class kardsBuild extends Base {
     }
 
     public void obtenerCodigoImportacion() {
-        int cantidadCartas = 0;
-        cantidadCartas = Integer.parseInt(maxCartas));
-        if (cantidadCartas == 40) {
+        // int cantidadCartas = 0;
+        // cantidadCartas = Integer.parseInt(getText(maxCartas));
+        if (getText(maxCartas).equals("40/40")) {
             esperarElemento(codigoImportacion);
             clickElemento(codigoImportacion);
         }

@@ -21,10 +21,13 @@ public class kardsBuild extends Base {
     ///// METODOS /////
 
     /// buscar y agregar carta al mazo ///
-    public void buscarCarta(String nombreCarta, By carta) {
+    public void buscarCarta(String nombreCarta, By carta, int numero) {
         sendKey(buscador, nombreCarta);
         esperarElemento(carta);
-        clickElemento(carta);
+
+        for (int i = 0; i < numero; i++) {
+            clickElemento(carta);
+        }
     }
 
     public void obtenerCodigoImportacion() {

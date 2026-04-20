@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class nacion extends Base {
+public class kardsNacion extends Base {
 
     ///// REFERENCIAS /////
     private String urlNacion = "https://www.kards.com/es/decks/deck-builder";
@@ -19,15 +19,15 @@ public class nacion extends Base {
 
     
     ///// CONSTRUCTOR /////
-    public nacion(WebDriver driver) {
+    public kardsNacion(WebDriver driver) {
         super.driver = driver;
         PageFactory.initElements(driver, this);
     }
     
     ///// METODOS /////
     public void seleccionarNacion() {
-        esperarElemento(nacion);
-        clickElemento(nacion);
+        esperarElemento(nacionPrincipal);
+        clickElemento(nacionPrincipal);
         clickElemento(nacionAliada);
         clickElemento(botonCrearMazo);
         

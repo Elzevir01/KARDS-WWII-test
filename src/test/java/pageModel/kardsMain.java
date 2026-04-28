@@ -12,7 +12,7 @@ public class kardsMain extends Base {
     ///// ELEMENTOS WEB /////
     // idioma
     private By menu = By.xpath("//button[@class='Header_header__hamburger__bxks8']");
-    private By idiomaEspanol = By.xpath("//a[@href='/es/']");
+    private By idiomaEspanol = By.xpath("//a[@href='/es/?']");
     // private By idiomaEspañol =
     // By.xpath("//li//div//a[@href='/es/decks/deck-builder']");
 

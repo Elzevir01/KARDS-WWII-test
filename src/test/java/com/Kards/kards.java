@@ -48,7 +48,7 @@ public class kards {
     private static Logger Log = LogManager.getLogger(kards.class);
 
     @Test
-    public void Test_1_idioma_naciones() {
+    public void Test_1_idioma() {
         try {
             km = new kardsMain(driver);
             String url = "https://www.kards.com/";
@@ -57,6 +57,16 @@ public class kards {
             km.seleccionarDeckBuilder();
             Thread.sleep(5000);
 
+        } catch (Exception e) {
+            Log.error("Causa : " + e.getCause());
+            Log.error("Mensaje : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void Test_2_naciones() {
+        try {
             kn = new kardsNacion(driver);
             kn.seleccionarNacion();
 
@@ -70,7 +80,7 @@ public class kards {
     /*
      * @Test(priority = 2, dataProvider = "deckCards", dataProviderClass =
      * DeckRecipe.class)
-     * public void Test_2_seleccionarCartas(By carta, int numero, String nombre) {
+     * public void Test_3_seleccionarCartas(By carta, int numero, String nombre) {
      * kb = new kardsBuild(driver);
      * 
      * Log.info("Buscando y agregando: " + nombre + " :: numero de veces: " + numero
@@ -85,7 +95,7 @@ public class kards {
      * }
      * 
      * @Test
-     * public void Test_3_generarCodigoMazo() {
+     * public void Test_4_generarCodigoMazo() {
      * kb = new kardsBuild(driver);
      * kb.obtenerCodigoImportacion();
      * }

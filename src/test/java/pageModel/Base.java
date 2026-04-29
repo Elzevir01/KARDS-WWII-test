@@ -38,6 +38,10 @@ public class Base {
         return element;
     }
 
+    public void clearElemento(By elemento) {
+        findElemento(elemento).clear();
+    }
+
     public WebElement listaElemento(By elemento, int numero) {
         List<WebElement> lista = driver.findElements(elemento);
         WebElement elementoNumero = lista.get(numero);

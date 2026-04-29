@@ -22,10 +22,12 @@ public class kardsBuild extends Base {
 
     /// buscar y agregar carta al mazo ///
     public void buscarCarta(String nombreCarta, By carta, int numero) {
+
         sendKey(buscador, nombreCarta);
         esperarElemento(carta);
 
         for (int i = 0; i < numero; i++) {
+            clearElemento(buscador);
             clickElemento(carta);
         }
     }

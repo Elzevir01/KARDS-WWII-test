@@ -26,12 +26,12 @@ public class kardsNacion extends Base {
 
     ///// METODOS /////
     public void seleccionarNacion() {
-        if (driver.getCurrentUrl().equals(urlNacion)) {
-            esperarElemento(nacionPrincipal);
-            clickElemento(nacionPrincipal);
-            clickElemento(nacionAliada);
-            clickElemento(botonCrearMazo);
-        }
+        // if (driver.getCurrentUrl().equals(urlNacion)) {
+        esperarElemento(nacionPrincipal);
+        clickElemento(nacionPrincipal);
+        clickElemento(nacionAliada);
+        clickElemento(botonCrearMazo);
+        // }
 
     }
 }

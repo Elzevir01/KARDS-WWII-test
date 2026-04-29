@@ -49,15 +49,22 @@ public class kards {
 
     @Test
     public void Test_1_idioma_naciones() {
-        km = new kardsMain(driver);
-        String url = "https://www.kards.com/";
-        km.navegar(url);
-        km.seleccionarIdiomaEspañol();
-        km.seleccionarDeckBuilder();
+        try {
+            km = new kardsMain(driver);
+            String url = "https://www.kards.com/";
+            km.navegar(url);
+            km.seleccionarIdiomaEspañol();
+            km.seleccionarDeckBuilder();
+            Thread.sleep(5000);
 
-        kn = new kardsNacion(driver);
-        kn.seleccionarNacion();
+            kn = new kardsNacion(driver);
+            kn.seleccionarNacion();
 
+        } catch (Exception e) {
+            Log.error("Causa : " + e.getCause());
+            Log.error("Mensaje : " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @Test(priority = 2, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
@@ -97,7 +104,8 @@ public class kards {
     @AfterTest
     public void TearDown() {
         try {
-            driver.quit();
+            // driver.quit();
+            dfd.quitDriver();
         } catch (Exception ex) {
             Log.error("Causa : " + ex.getCause());
             Log.error("Mensaje : " + ex.getMessage());

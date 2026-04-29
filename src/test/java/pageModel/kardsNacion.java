@@ -24,12 +24,20 @@ public class kardsNacion extends Base {
         PageFactory.initElements(driver, this);
     }
 
+    /// html/body/div[2]/div[1]/main/div/div/div[2]/div/div[2]/div[4]/div/div[2]/div[2]]
     ///// METODOS /////
     public void seleccionarNacion() {
-        // if (driver.getCurrentUrl().equals(urlNacion)) {
-        esperarElemento(nacionPrincipal);
+
+        if (driver.getCurrentUrl().equals(urlNacion))
+            System.out.println("Estamos en:'https://www.kards.com/es/decks/deck-builder'");
+
+        System.out.println("Esperar Nacion principal seleccionada");
+        // esperarElemento(nacionPrincipal);
+        System.out.println("Nacion principal seleccionada");
         clickElemento(nacionPrincipal);
+        System.out.println("Nacion aliada seleccionada");
         clickElemento(nacionAliada);
+        System.out.println("Boton crear mazo");
         clickElemento(botonCrearMazo);
         // }
 

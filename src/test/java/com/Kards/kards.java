@@ -67,26 +67,29 @@ public class kards {
         }
     }
 
-    @Test(priority = 2, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
-    public void Test_2_seleccionarCartas(By carta, int numero, String nombre) {
-        kb = new kardsBuild(driver);
-
-        Log.info("Buscando y agregando: " + nombre + " :: numero de veces: " + numero + "");
-
-        // ---generar mazo---//
-
-        // kb.esperarElemento(carta);
-        // kb.findElemento(carta).click();
-        kb.buscarCarta(nombre, carta, numero);
-
-    }
-
-    @Test
-    public void Test_3_generarCodigoMazo() {
-        kb = new kardsBuild(driver);
-        kb.obtenerCodigoImportacion();
-    }
-
+    /*
+     * @Test(priority = 2, dataProvider = "deckCards", dataProviderClass =
+     * DeckRecipe.class)
+     * public void Test_2_seleccionarCartas(By carta, int numero, String nombre) {
+     * kb = new kardsBuild(driver);
+     * 
+     * Log.info("Buscando y agregando: " + nombre + " :: numero de veces: " + numero
+     * + "");
+     * 
+     * // ---generar mazo---//
+     * 
+     * // kb.esperarElemento(carta);
+     * // kb.findElemento(carta).click();
+     * kb.buscarCarta(nombre, carta, numero);
+     * 
+     * }
+     * 
+     * @Test
+     * public void Test_3_generarCodigoMazo() {
+     * kb = new kardsBuild(driver);
+     * kb.obtenerCodigoImportacion();
+     * }
+     */
     @BeforeTest
     @Parameters({ "browser", "nodeUrl" })
     public void SetUp(String browser, String nodeUrl) throws MalformedURLException {

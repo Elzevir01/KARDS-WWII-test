@@ -49,15 +49,15 @@ public class DeckRecipe {
                 { kFUEGOAMIGO, 3, "FUEGO AMIGO" },
                 { kLESTERRIBLE, 3, "LES TERRIBLE" },
                 { kMUJERESENLAFUERZALABORAL, 1, "MUJERES EN LA FUERZA LABORAL" },
-                { k13BATALLON, 1, "13.º BATALLÓN DE INGENIEROS" },
-                { kLOTASVARD, 1, "LOTTA SVARD" },
+                { k13BATALLON, 1, "10.º BATALLÓN DE INGENIEROS" },
+                { kLOTASVARD, 1, "LOTTA SVÄRD" },
                 { k175REGIMIENTO, 4, "175.º REGIMIENTO DE INFANTERÍA" },
                 { kSISU, 3, "SISU" },
-                { k4MARINES, 2, "4.º MARINES" },
+                { k4MARINES, 2, "4.º MARINES" }, // reservada
                 { kUSSMISSOURI, 1, "USS MISSOURI" },
                 { kLAMUERTEBLANCA, 1, "LA MUERTE BLANCA" },
-                { k5BATALLONMEDICOS, 1, "5.º BATALLÓN DE MÉDICOS" },
-                { kELTIO, 1, "EL TÍO SAM" },
+                { k5BATALLONMEDICOS, 1, "5.º BATALLÓN DE MÉDICOS" }, // reservada
+                { kELTIO, 1, "EL TÍO SAM" }, // reservada
                 { kFUERZADEVASTADORA, 2, "FUERZA DEVASTADORA" },
                 { k13REGIMIENTO, 2, "13.º REGIMIENTO DE INFANTERÍA" }
         };

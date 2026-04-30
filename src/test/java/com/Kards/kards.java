@@ -42,6 +42,7 @@ public class kards {
     pageModel.kardsBuild kb;
     DriverFactoryDirect dfd;
     WebDriver driver;
+    boolean reservadas = false;
 
     private static Logger Log = LogManager.getLogger(kards.class);
 
@@ -78,7 +79,10 @@ public class kards {
     @Test(priority = 3, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
     public void Test_3_seleccionarCartas(By carta, int numero, String nombre) {
         kb = new kardsBuild(driver);
-
+        if (reservadas = false) {
+            kb.incluirReservadas();
+            reservadas = true;
+        }
         Log.info("Buscando y agregando: " + nombre + " :: numero de veces: " + numero + "");
 
         // ---generar mazo---//

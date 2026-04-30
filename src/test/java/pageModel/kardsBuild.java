@@ -13,6 +13,8 @@ public class kardsBuild extends Base {
             "/html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div/div/article/div/div/div[3]");
     private By limpiarFiltros = By.xpath(
             "//span[contains(text(), 'Borrar filtros')] | /html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]");
+    private By incluirReservadas = By.xpath(
+            "//button[contains(text(), 'Incluir cartas reservadas')]");
 
     ///// CONSTRUCTOR /////
     public kardsBuild(WebDriver driver) {
@@ -49,6 +51,11 @@ public class kardsBuild extends Base {
             esperarElemento(codigoImportacion);
             clickElemento(codigoImportacion);
         }
+    }
+
+    public void incluirReservadas() {
+        if (checkElement(incluirReservadas))
+            clickElemento(incluirReservadas);
     }
 
 }

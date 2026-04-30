@@ -11,6 +11,8 @@ public class kardsBuild extends Base {
             .xpath("/html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[2]/div[1]/button/span[2]");
     private By maxCartas = By.xpath(
             "/html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div/div/article/div/div/div[3]");
+    private By limpiarFiltros = By.xpath(
+            "//span[contains(text(), 'Borrar filtros')] | /html/body/div[2]/div[1]/main/div/div/div[2]/div/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]");
 
     ///// CONSTRUCTOR /////
     public kardsBuild(WebDriver driver) {
@@ -22,14 +24,16 @@ public class kardsBuild extends Base {
 
     /// buscar y agregar carta al mazo ///
     public void buscarCarta(String nombreCarta, By carta, int numero) {
+        clearElemento(buscador);
 
         sendKey(buscador, nombreCarta);
         esperarElemento(carta);
 
         for (int i = 0; i < numero; i++) {
-            clearElemento(buscador);
+
             clickElemento(carta);
         }
+        clickElemento(limpiarFiltros);
     }
 
     public void obtenerCodigoImportacion() {

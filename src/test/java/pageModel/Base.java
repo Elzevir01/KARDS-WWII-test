@@ -39,7 +39,9 @@ public class Base {
     }
 
     public void clearElemento(By elemento) {
+
         findElemento(elemento).clear();
+
     }
 
     public WebElement listaElemento(By elemento, int numero) {

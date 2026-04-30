@@ -2,8 +2,6 @@ package com.Kards;
 
 import org.testng.annotations.Test;
 
-import driver.DriverFactoryDirect;
-
 //import driver.DriverFactoryDirect;
 
 import org.testng.annotations.Parameters;
@@ -77,7 +75,7 @@ public class kards {
         }
     }
 
-    @Test(priority = 2, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
+    @Test(priority = 3, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
     public void Test_3_seleccionarCartas(By carta, int numero, String nombre) {
         kb = new kardsBuild(driver);
 

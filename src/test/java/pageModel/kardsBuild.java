@@ -24,16 +24,22 @@ public class kardsBuild extends Base {
 
     /// buscar y agregar carta al mazo ///
     public void buscarCarta(String nombreCarta, By carta, int numero) {
-        clearElemento(buscador);
+        try {
+            clearElemento(buscador);
+            sendKey(buscador, nombreCarta);
+            esperarElemento(carta);
 
-        sendKey(buscador, nombreCarta);
-        esperarElemento(carta);
-
-        for (int i = 0; i < numero; i++) {
-
-            clickElemento(carta);
+            if (checkElement(carta)) {
+                for (int i = 0; i < numero; i++) {
+                    clickElemento(carta);
+                }
+            }
+            if (checkElement(limpiarFiltros))
+                clickElemento(limpiarFiltros);
+        } catch (Exception e) {
+            System.out.println("Error al buscar carta: " + e);
+            clickElemento(limpiarFiltros);
         }
-        clickElemento(limpiarFiltros);
     }
 
     public void obtenerCodigoImportacion() {

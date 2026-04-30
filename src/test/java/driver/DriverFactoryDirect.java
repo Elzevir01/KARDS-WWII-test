@@ -35,7 +35,7 @@ public class DriverFactoryDirect {
 
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
+        driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 

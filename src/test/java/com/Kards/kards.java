@@ -69,7 +69,7 @@ public class kards {
         try {
             kn = new kardsNacion(driver);
             kn.seleccionarNacion();
-
+            Thread.sleep(5000);
         } catch (Exception e) {
             Log.error("Causa : " + e.getCause());
             Log.error("Mensaje : " + e.getMessage());
@@ -92,8 +92,15 @@ public class kards {
 
     @Test
     public void Test_4_generarCodigoMazo() {
-        kb = new kardsBuild(driver);
-        kb.obtenerCodigoImportacion();
+        try {
+            kb = new kardsBuild(driver);
+            kb.obtenerCodigoImportacion();
+            Thread.sleep(5000);
+        } catch (Exception e) {
+            Log.error("Causa : " + e.getCause());
+            Log.error("Mensaje : " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @BeforeTest

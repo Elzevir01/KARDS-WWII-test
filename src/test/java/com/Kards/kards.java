@@ -52,6 +52,7 @@ public class kards {
             km = new kardsMain(driver);
             String url = "https://www.kards.com/";
             km.navegar(url);
+            Thread.sleep(5000);
             km.seleccionarIdiomaEspañol();
             km.seleccionarDeckBuilder();
             Thread.sleep(5000);
@@ -86,10 +87,7 @@ public class kards {
         Log.info("Buscando y agregando: " + nombre + " :: numero de veces: " + numero + "");
 
         // ---generar mazo---//
-
-        // kb.esperarElemento(carta);
-        // kb.findElemento(carta).click();
-        kb.buscarCarta(nombre, carta, numero);
+        // kb.buscarCarta(nombre, carta, numero);
     }
 
     @Test

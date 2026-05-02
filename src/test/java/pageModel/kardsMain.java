@@ -13,6 +13,8 @@ public class kardsMain extends Base {
     // idioma
     private By menu = By.xpath("//button[@class='Header_header__hamburger__bxks8']");
     private By idiomaEspanol = By.xpath("//a[@href='/es/?']");
+    private By cookies = By.xpath(
+            "//span[contains(text(),'Accept')] | /html/body/div[2]/div[1]/div[1]/div/div[2]/ul/li[2]/button/span[2]");
     // private By idiomaEspañol =
     // By.xpath("//li//div//a[@href='/es/decks/deck-builder']");
 
@@ -39,6 +41,11 @@ public class kardsMain extends Base {
             esperarElemento(contructorMazo);
             clickElemento(contructorMazo);
         }
+    }
+
+    public void allowCookies() {
+        esperarElemento(cookies);
+        clickElemento(cookies);
     }
 
 }

@@ -53,6 +53,7 @@ public class kards {
             String url = "https://www.kards.com/";
             km.navegar(url);
             Thread.sleep(5000);
+            km.allowCookies();
             km.seleccionarIdiomaEspañol();
             km.seleccionarDeckBuilder();
             Thread.sleep(5000);

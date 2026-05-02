@@ -54,7 +54,14 @@ public class kardsBuild extends Base {
     }
 
     public void incluirReservadas() {
-        findElemento(incluirReservadas).click();
+        try {
+            Thread.sleep(2000);
+            esperarElemento(incluirReservadas);
+            findElemento(incluirReservadas).click();
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
 }

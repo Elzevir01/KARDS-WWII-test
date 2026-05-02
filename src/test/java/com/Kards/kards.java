@@ -80,7 +80,7 @@ public class kards {
     @Test(priority = 3, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
     public void Test_3_seleccionarCartas(By carta, int numero, String nombre) {
         kb = new kardsBuild(driver);
-        Log.info("valor reservadas: " + reservadas);
+        System.out.println("valor reservadas: " + reservadas);
         if (reservadas == false) {
             kb.incluirReservadas();
             reservadas = true;

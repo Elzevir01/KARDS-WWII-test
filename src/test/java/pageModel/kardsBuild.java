@@ -55,13 +55,30 @@ public class kardsBuild extends Base {
 
     public void incluirReservadas() {
         try {
+            // Esperar un momento para asegurar que los scripts de la pagina carguen
             Thread.sleep(2000);
             esperarElemento(incluirReservadas);
-            findElemento(incluirReservadas).click();
+            org.openqa.selenium.WebElement element = findElemento(incluirReservadas);
+
+            // Hacer scroll hacia el elemento
+            org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+            Thread.sleep(500);
+
+            try {
+                element.click();
+                System.out.println("Casilla 'Incluir cartas reservadas' clickeada exitosamente.");
+                Thread.sleep(1000); // Esperar a que los resultados se refresquen en la UI
+
+            } catch (Exception e) {
+                // Fallback a click con Javascript si Selenium es bloqueado
+                executor.executeScript("arguments[0].click();", element);
+            }
+            System.out.println("Casilla 'Incluir cartas reservadas' clickeada exitosamente.");
+            Thread.sleep(1000); // Esperar a que los resultados se refresquen en la UI
+
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
-
 }

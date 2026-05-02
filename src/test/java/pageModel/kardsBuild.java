@@ -27,6 +27,7 @@ public class kardsBuild extends Base {
     /// buscar y agregar carta al mazo ///
     public void buscarCarta(String nombreCarta, By carta, int numero) {
         try {
+            System.out.println("Buscando carta: " + nombreCarta + ", cantidad: " + numero + " copias");
             clearElemento(buscador);
             sendKey(buscador, nombreCarta);
             esperarElemento(carta);

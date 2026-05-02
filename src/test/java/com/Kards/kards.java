@@ -88,7 +88,7 @@ public class kards {
         Log.info("Buscando y agregando: " + nombre + " :: numero de veces: " + numero + "");
 
         // ---generar mazo---//
-        // kb.buscarCarta(nombre, carta, numero);
+        kb.buscarCarta(nombre, carta, numero);
     }
 
     @Test

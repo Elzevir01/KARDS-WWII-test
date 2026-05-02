@@ -54,7 +54,7 @@ public class kardsBuild extends Base {
     }
 
     public void incluirReservadas() {
-        clickElemento(incluirReservadas);
+        findElemento(incluirReservadas).click();
     }
 
 }

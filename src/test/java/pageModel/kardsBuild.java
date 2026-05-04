@@ -37,6 +37,7 @@ public class kardsBuild extends Base {
                     clickElemento(carta);
                 }
             }
+            Thread.sleep(2000);
             /*
              * if (checkElement(limpiarFiltros))
              * clickElemento(limpiarFiltros);

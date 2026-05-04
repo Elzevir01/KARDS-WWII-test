@@ -37,8 +37,10 @@ public class kardsBuild extends Base {
                     clickElemento(carta);
                 }
             }
-            if (checkElement(limpiarFiltros))
-                clickElemento(limpiarFiltros);
+            /*
+             * if (checkElement(limpiarFiltros))
+             * clickElemento(limpiarFiltros);
+             */
         } catch (Exception e) {
             System.out.println("Error al buscar carta: " + e);
             clickElemento(limpiarFiltros);

@@ -60,7 +60,7 @@ public class kardsBuild extends Base {
     public void incluirReservadas() {
         try {
             // Esperar un momento para asegurar que los scripts de la pagina carguen
-            Thread.sleep(2000);
+            // Thread.sleep(2000);
             esperarElemento(incluirReservadas);
             org.openqa.selenium.WebElement element = findElemento(incluirReservadas);
 

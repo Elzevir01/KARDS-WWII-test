@@ -93,6 +93,15 @@ public class Base {
     }
 
     public void esperarWeb() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        // DOM cargado
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState")
+                .equals("complete"));
+
+        // Esperar que exista el body visible
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
     }
 
     public void confirmarTitulo(String titulo) {

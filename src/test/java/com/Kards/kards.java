@@ -52,11 +52,13 @@ public class kards {
             km = new kardsMain(driver);
             String url = "https://www.kards.com/";
             km.navegar(url);
-            Thread.sleep(5000);
+            km.esperarWeb();
+            // Thread.sleep(5000);
             km.allowCookies();
             km.seleccionarIdiomaEspañol();
             km.seleccionarDeckBuilder();
-            Thread.sleep(5000);
+            km.esperarWeb();
+            // Thread.sleep(5000);
 
         } catch (Exception e) {
             Log.error("Causa : " + e.getCause());
@@ -70,7 +72,8 @@ public class kards {
         try {
             kn = new kardsNacion(driver);
             kn.seleccionarNacion();
-            Thread.sleep(5000);
+            kn.esperarWeb();
+            // Thread.sleep(5000);
         } catch (Exception e) {
             Log.error("Causa : " + e.getCause());
             Log.error("Mensaje : " + e.getMessage());
@@ -97,7 +100,8 @@ public class kards {
         try {
             kb = new kardsBuild(driver);
             kb.obtenerCodigoImportacion();
-            Thread.sleep(5000);
+            kb.esperarWeb();
+            // Thread.sleep(5000);
         } catch (Exception e) {
             Log.error("Causa : " + e.getCause());
             Log.error("Mensaje : " + e.getMessage());

@@ -73,7 +73,7 @@ public class kards {
             kn = new kardsNacion(driver);
             kn.seleccionarNacion();
             kn.esperarWeb();
-            // Thread.sleep(5000);
+            Thread.sleep(5000);
         } catch (Exception e) {
             Log.error("Causa : " + e.getCause());
             Log.error("Mensaje : " + e.getMessage());

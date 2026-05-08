@@ -72,8 +72,8 @@ public class kards {
         try {
             kn = new kardsNacion(driver);
             kn.seleccionarNacion();
-            kn.esperarWeb();
-            Thread.sleep(5000);
+            // kn.esperarWeb();
+            // Thread.sleep(5000);
         } catch (Exception e) {
             Log.error("Causa : " + e.getCause());
             Log.error("Mensaje : " + e.getMessage());
@@ -86,6 +86,7 @@ public class kards {
         kb = new kardsBuild(driver);
         System.out.println("valor reservadas: " + reservadas);
         if (reservadas == false) {
+            kb.esperarWeb();
             kb.incluirReservadas();
             reservadas = true;
         }

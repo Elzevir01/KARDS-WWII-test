@@ -31,13 +31,13 @@ public class kardsBuild extends Base {
             clearElemento(buscador);
             sendKey(buscador, nombreCarta);
             esperarElemento(carta);
-
+            Thread.sleep(3000);
             if (checkElement(carta)) {
                 for (int i = 0; i < numero; i++) {
                     clickElemento(carta);
                 }
             }
-            Thread.sleep(2000);
+
             /*
              * if (checkElement(limpiarFiltros))
              * clickElemento(limpiarFiltros);

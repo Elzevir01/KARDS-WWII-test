@@ -46,7 +46,12 @@ public class kards {
 
     private static Logger Log = LogManager.getLogger(kards.class);
 
-    @Test
+    @Description("Cambia el idioma de la web y selecciona construccion de mazo")
+    @Epic("Test de idioma")
+    @Story("Seleccion de idioma")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(name = "kards.com - principal", url = "https://www.kards.com/")
+    @Test(priority = 1, description = "Cambia el idioma de la web y selecciona deck builder")
     public void Test_1_idioma() {
         try {
             km = new kardsMain(driver);
@@ -67,7 +72,12 @@ public class kards {
         }
     }
 
-    @Test
+    @Description("Selecciona una nacion principal, aliada y click en crear mazo")
+    @Epic("Test seleccionde nacion")
+    @Story("Seleccion de nacion")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(name = "kards.com - seleccion de naciones", url = "https://www.kards.com/es/decks/deck-builder")
+    @Test(priority = 2, description = "Selecciona nacion principal y aliada")
     public void Test_2_naciones() {
         try {
             kn = new kardsNacion(driver);
@@ -81,6 +91,11 @@ public class kards {
         }
     }
 
+    @Description("Selecciona las cartas del mazo")
+    @Epic("Test seleccionde cada carta del mazo")
+    @Story("Seleccion de cada carta del mazo")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(name = "kards.com - deck builder", url = "https://www.kards.com/es/decks/deck-builder?hash=%25%2559|%3B%3B%3B")
     @Test(priority = 3, dataProvider = "deckCards", dataProviderClass = DeckRecipe.class)
     public void Test_3_seleccionarCartas(By carta, int numero, String nombre) {
         kb = new kardsBuild(driver);
@@ -96,7 +111,12 @@ public class kards {
         kb.buscarCarta(nombre, carta, numero);
     }
 
-    @Test
+    @Description("Obtiene el codigo de importacion del mazo")
+    @Epic("Test obtencion de codigo de importacion")
+    @Story("Obtencion de codigo de importacion")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(name = "kards.com - deck builder", url = "https://www.kards.com/es/decks/deck-builder?hash=%25%2559|%3B%3B%3B")
+    @Test(priority = 4, description = "Obtiene el codigo de importacion del mazo")
     public void Test_4_generarCodigoMazo() {
         try {
             kb = new kardsBuild(driver);
